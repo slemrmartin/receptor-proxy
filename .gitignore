@@ -20,3 +20,5 @@
 /.rspec_status
 /.ruby-gemset
 /.ruby-version
+
+/db/*.sqlite*

@@ -6,7 +6,7 @@ require File.join(Bundler::Plugin.index.load_paths("bundler-inject")[0], "bundle
 gem 'jbuilder', '~> 2.0'
 gem 'manageiq-loggers', '~> 0.3.0'
 gem 'rails', '~> 5.2.2'
-
+gem 'sqlite3'
 
 gem 'puma', '~> 3.11'
 
@@ -14,9 +14,9 @@ gem 'puma', '~> 3.11'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
-  gem 'simplecov'
   gem 'rubocop',             '~>0.69.0', :require => false
   gem 'rubocop-performance', '~>1.3',    :require => false
+  gem 'simplecov'
 end
 
 group :development do
