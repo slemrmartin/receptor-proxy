@@ -5,4 +5,6 @@ Rails.application.routes.draw do
       get :source_update
     end
   end
+
+  post "/http_request", :to => 'http_request#send'
 end

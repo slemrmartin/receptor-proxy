@@ -1,5 +1,3 @@
-require 'socket'
-
 class OrdersController < ApplicationController
   # GET
   def index
@@ -44,5 +42,13 @@ class OrdersController < ApplicationController
   # This name has to be in sources db
   def target_receptor
     "node-a"
+  end
+
+  def identity_headers(tenant)
+    {
+      "x-rh-identity" => Base64.strict_encode64(
+        JSON.dump({"identity" => {"account_number" => tenant}})
+      )
+    }
   end
 end
