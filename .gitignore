@@ -9,9 +9,7 @@
 /bundler.d/*
 
 # Ignore all logfiles and tempfiles.
-/log/*
 /tmp/*
-!/log/.keep
 !/tmp/.keep
 
 /Gemfile.lock
@@ -20,5 +18,3 @@
 /.rspec_status
 /.ruby-gemset
 /.ruby-version
-
-/db/*.sqlite*

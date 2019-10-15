@@ -1,5 +1,11 @@
+lib = File.expand_path("lib", __dir__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
 # This file is used by Rack-based servers to start the application.
+require 'receptor_proxy'
+require "bundler/setup"
 
-require_relative 'config/environment'
+# This middleware is to support optional logging
+use Rack::Logger
 
-run Rails.application
+run ReceptorProxy.server
